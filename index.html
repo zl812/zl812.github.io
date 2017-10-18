@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-jquery" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/18/jquery/" class="article-date">
+  <time datetime="2017-10-18T14:51:04.000Z" itemprop="datePublished">2017-10-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jquery/">jquery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/18/jquery/">jquery</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="jQuery操作样式"><a href="#jQuery操作样式" class="headerlink" title="jQuery操作样式"></a>jQuery操作样式</h1><h2 id="css操作"><a href="#css操作" class="headerlink" title="css操作"></a>css操作</h2><blockquote>
+<p>功能：设置或者修改样式，操作的是style属性,是行内的样式。</p>
+<p>操作单个样式</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//name：需要设置的样式名称</span></div><div class="line"><span class="comment">//value：对应的样式值</span></div><div class="line">css(name, value);</div><div class="line"><span class="comment">//使用案例</span></div><div class="line">$(<span class="string">"#one"</span>).css(<span class="string">"background"</span>,<span class="string">"gray"</span>);<span class="comment">//将背景色修改为灰色</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>设置多个样式</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//参数是一个对象，对象中包含了需要设置的样式名和样式值</span></div><div class="line">css(obj);</div><div class="line"><span class="comment">//使用案例</span></div><div class="line">$(<span class="string">"#one"</span>).css(&#123;</div><div class="line">    <span class="string">"background"</span>:<span class="string">"gray"</span>,</div><div class="line">    <span class="string">"width"</span>:<span class="string">"400px"</span>,</div><div class="line">    <span class="string">"height"</span>:<span class="string">"200px"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>获取样式</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//name:需要获取的样式名称</span></div><div class="line">css(name);</div><div class="line"><span class="comment">//案例</span></div><div class="line">$(<span class="string">"div"</span>).css(<span class="string">"background-color"</span>);</div></pre></td></tr></table></figure>
+<p>注意：获取样式操作只会返回第一个元素对应的样式值。</p>
+<p>隐式迭代：</p>
+<ol>
+<li>设置操作的时候，如果是多个元素，那么给所有的元素设置相同的值</li>
+<li>获取操作的时候，如果是多个元素，那么只会返回第一个元素的值。</li>
+</ol>
+<h2 id="class操作"><a href="#class操作" class="headerlink" title="class操作"></a>class操作</h2><blockquote>
+<p>添加样式类</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//name：需要添加的样式类名，注意参数不要带点.</span></div><div class="line">addClass(name);</div><div class="line"><span class="comment">//例子,给所有的div添加one的样式,不会覆盖原来的类只是在原来的基础上加一个类,会有CSS权重问题,想要谁最后生效,把类放下面就行了</span></div><div class="line">$(“div”).addClass(“one”);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>移除样式类</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//name:需要移除的样式类名</span></div><div class="line">removeClass(“name”);</div><div class="line"><span class="comment">//例子，移除div中one的样式类名</span></div><div class="line">$(“div”).removeClass(“one”);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>判断是否有某个样式类</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//name:用于判断的样式类名，返回值为true false</span></div><div class="line">hasClass(name)</div><div class="line"><span class="comment">//例子，判断第一个div是否有one的样式类</span></div><div class="line">$(“div”).hasClass(“one”);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>切换样式类</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//name:需要切换的样式类名，如果有，移除该样式，如果没有，添加该样式。</span></div><div class="line">toggleClass(name);</div><div class="line"><span class="comment">//例子</span></div><div class="line">$(“div”).toggleClass(“one”);</div></pre></td></tr></table></figure>
+<p>【案例：tab栏切换案例.html】<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// $(function () &#123;</div><div class="line"> //   //1. 给所有的li注册鼠标进入事件</div><div class="line"> //   $(&quot;.tab-item&quot;).mouseenter(function () &#123;</div><div class="line"> //     //2. 让当前li有active类，排他</div><div class="line"> //     $(this).addClass(&quot;active&quot;).siblings().removeClass(&quot;active&quot;);</div><div class="line"> //     //3. 让当li对应的div有selected类，排他</div><div class="line"> //     var idx = $(this).index();</div><div class="line"> //     $(&quot;.main&quot;).eq(idx).addClass(&quot;selected&quot;).siblings().removeClass(&quot;selected&quot;);</div><div class="line"> //   &#125;);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"> // &#125;);</div></pre></td></tr></table></figure></p>
+<h1 id="jQuery操作属性"><a href="#jQuery操作属性" class="headerlink" title="jQuery操作属性"></a>jQuery操作属性</h1><h2 id="attr操作"><a href="#attr操作" class="headerlink" title="attr操作"></a>attr操作</h2><p>在style里面的都是样式,用CSS<br>在标签里面的叫做属性</p>
+<blockquote>
+<p>设置单个属性</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第一个参数：需要设置的属性名</span></div><div class="line"><span class="comment">//第二个参数：对应的属性值</span></div><div class="line">attr(name, value);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(“img”).attr(“title”,”哎哟，不错哦”);</div><div class="line">$(“img”).attr(“alt”,“哎哟，不错哦”);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>设置多个属性</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//参数是一个对象，包含了需要设置的属性名和属性值</span></div><div class="line">attr(obj)</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).attr(&#123;</div><div class="line">    title:<span class="string">"哎哟，不错哦"</span>,</div><div class="line">    alt:<span class="string">"哎哟，不错哦"</span>,</div><div class="line">    style:<span class="string">"opacity:.5"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>获取属性</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//传需要获取的属性名称，返回对应的属性值</span></div><div class="line">attr(name)</div><div class="line"><span class="comment">//用法举例</span></div><div class="line"><span class="keyword">var</span> oTitle = $(<span class="string">"img"</span>).attr(<span class="string">"title"</span>);</div><div class="line">alert(oTitle);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>移除属性</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//参数：需要移除的属性名，</span></div><div class="line">removeAttr(name);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).removeAttr(<span class="string">"title"</span>);</div></pre></td></tr></table></figure>
+<p>【案例：美女相册.html】</p>
+<h2 id="prop操作"><a href="#prop操作" class="headerlink" title="prop操作"></a>prop操作</h2><blockquote>
+<p>在jQuery1.6之后，对于checked、selected、disabled这类boolean类型的属性来说，不能用attr方法，只能用prop方法。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置属性</span></div><div class="line">$(“:checked”).prop(“checked”,<span class="literal">true</span>);</div><div class="line"><span class="comment">//获取属性</span></div><div class="line">$(“:checked”).prop(“checked”);<span class="comment">//返回true或者false</span></div></pre></td></tr></table></figure>
+<p>【案例：表格全选案例.html】</p>
+<h1 id="jQuery动画"><a href="#jQuery动画" class="headerlink" title="jQuery动画"></a>jQuery动画</h1><blockquote>
+<p>jquery提供了三组基本动画，这些动画都是标准的、有规律的效果，jquery还提供了自定义动画的功能。【演示动画例子】</p>
+</blockquote>
+<h2 id="三组基本动画"><a href="#三组基本动画" class="headerlink" title="三组基本动画"></a>三组基本动画</h2><blockquote>
+<p>显示(show)与隐藏(hide)是一组动画：<br>滑入(slideUp)与滑出(slideDown)与切换(slideToggle)，效果与卷帘门类似<br>淡入(fadeIn)与淡出(fadeOut)与切换(fadeToggle)</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">show([speed], [callback]);</div><div class="line"><span class="comment">//speed(可选)：动画的执行时间</span></div><div class="line">	 <span class="comment">//1.如果不传，就没有动画效果。如果是slide和fade系列，会默认为normal</span></div><div class="line">	 <span class="comment">//2.毫秒值(比如1000),动画在1000毫秒执行完成(推荐)</span></div><div class="line">     <span class="comment">//3.固定字符串，slow(200)、normal(400)、fast(600)，如果传其他字符串，则默认为normal。</span></div><div class="line"><span class="comment">//callback(可选):执行完动画后执行的回调函数</span></div></pre></td></tr></table></figure>
+<p>【案例：下拉菜单动画版.html】<br>【案例：京东轮播图(呼吸灯).html】<br>CSS样式是绝对定位隐藏</p>
+<h2 id="自定义动画"><a href="#自定义动画" class="headerlink" title="自定义动画"></a>自定义动画</h2><blockquote>
+<p>animate: 自定义动画</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(selector).animate(&#123;params&#125;,[speed],[easing],[callback]);</div><div class="line"><span class="comment">// &#123;params&#125;：要执行动画的CSS属性，带数字（必选）</span></div><div class="line"><span class="comment">// speed：执行动画时长（可选）</span></div><div class="line"><span class="comment">// easing:执行效果，默认为swing（缓动）  可以是linear（匀速）</span></div><div class="line"><span class="comment">// callback：动画执行完后立即执行的回调函数（可选）</span></div></pre></td></tr></table></figure>
+<h2 id="动画队列与停止动画"><a href="#动画队列与停止动画" class="headerlink" title="动画队列与停止动画"></a>动画队列与停止动画</h2><blockquote>
+<p>在同一个元素上执行多个动画，那么对于这个动画来说，后面的动画会被放到动画队列中，等前面的动画执行完成了才会执行（联想：火车进站）。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//stop方法：停止动画效果</span></div><div class="line">stop();</div></pre></td></tr></table></figure>
+<p>【案例：手风琴特效】<br>【案例：音乐导航】</p>
+<h1 id="jQuery节点操作"><a href="#jQuery节点操作" class="headerlink" title="jQuery节点操作"></a>jQuery节点操作</h1><h2 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//$(htmlStr)</span></div><div class="line"><span class="comment">//htmlStr：html格式的字符串</span></div><div class="line">$(“&lt;span&gt;这是一个span元素&lt;<span class="regexp">/span&gt;”);</span></div></pre></td></tr></table></figure>
+<h2 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//append  appendTo</span></div><div class="line"><span class="comment">//prepend prependTo</span></div><div class="line"><span class="comment">//before</span></div><div class="line"><span class="comment">//after</span></div></pre></td></tr></table></figure>
+<p>【案例：城市选择案例.html】</p>
+<h2 id="清空节点与删除节点"><a href="#清空节点与删除节点" class="headerlink" title="清空节点与删除节点"></a>清空节点与删除节点</h2><blockquote>
+<p>empty：清空指定节点的所有元素，自身保留(清理门户)</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(“div”).empty();<span class="comment">//清空div的所有内容（推荐使用，会清除子元素上绑定的内容，源码）</span></div><div class="line">$(“div”).html(“”);<span class="comment">//使用html方法来清空元素，不推荐使用，会造成内存泄漏，绑定的事件不会被清除。</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>remove：相比于empty，自身也删除（自杀）</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(“div”).remove();</div></pre></td></tr></table></figure>
+<h2 id="克隆节点"><a href="#克隆节点" class="headerlink" title="克隆节点"></a>克隆节点</h2><blockquote>
+<p>作用：复制匹配的元素</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 复制$(selector)所匹配到的元素（深度复制）</span></div><div class="line"><span class="comment">//cloneNode(true)</span></div><div class="line"><span class="comment">// 返回值为复制的新元素，和原来的元素没有任何关系了。即修改新元素，不会影响到原来的元素。</span></div><div class="line">$(selector).clone();</div></pre></td></tr></table></figure>
+<p>【案例：微博发布】<br>【案例：弹幕效果】</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/18/jquery/" data-id="cj8x5rg9m0001awqgo04f79dt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/18/hello-world/" class="article-date">
+  <time datetime="2017-10-18T14:34:22.013Z" itemprop="datePublished">2017-10-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/18/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/18/hello-world/" data-id="cj8x5rg9c0000awqgfbpmzxsx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/jquery/">jquery</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/18/jquery/">jquery</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/18/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
